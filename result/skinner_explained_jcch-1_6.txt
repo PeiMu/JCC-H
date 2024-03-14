@@ -1,3 +1,26 @@
+execute /home/pei/Project/benchmarks/JCC-H/out/skinner_explained/1.sql_explained.sql
+SET
+                                                                      QUERY PLAN                                                   
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+ Finalize GroupAggregate  (cost=242628.07..242630.15 rows=6 width=236) (actual time=4182.249..4182.354 rows=4 loops=1)
+   Group Key: l_returnflag, l_linestatus
+   ->  Gather Merge  (cost=242628.07..242629.47 rows=12 width=236) (actual time=4182.216..4188.090 rows=12 loops=1)
+         Workers Planned: 2
+         Workers Launched: 2
+         ->  Sort  (cost=241628.05..241628.07 rows=6 width=236) (actual time=4175.457..4175.458 rows=4 loops=3)
+               Sort Key: l_returnflag, l_linestatus
+               Sort Method: quicksort  Memory: 27kB
+               Worker 0:  Sort Method: quicksort  Memory: 27kB
+               Worker 1:  Sort Method: quicksort  Memory: 27kB
+               ->  Partial HashAggregate  (cost=241627.81..241627.97 rows=6 width=236) (actual time=4175.354..4175.366 rows=4 loops=3)
+                     Group Key: l_returnflag, l_linestatus
+                     ->  Parallel Seq Scan on lineitem  (cost=0.00..143759.33 rows=2446712 width=25) (actual time=0.075..999.028 rows=1959876 loops=3)
+                           Filter: (l_shipdate <= '1998-08-15 00:00:00'::timestamp without time zone)
+                           Rows Removed by Filter: 40529
+ Planning Time: 1.520 ms
+ Execution Time: 4188.615 ms
+(17 rows)
+
 execute /home/pei/Project/benchmarks/JCC-H/out/skinner_explained/10.sql_explained.sql
 SET
                                                                                      QUERY PLAN                                                                                     

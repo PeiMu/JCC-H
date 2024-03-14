@@ -24,7 +24,7 @@ CREATE TABLE SUPPLIER ( S_SUPPKEY     INTEGER NOT NULL,
                              S_NATIONKEY   INTEGER NOT NULL,
                              S_PHONE       CHAR(15) NOT NULL,
                              S_ACCTBAL     DECIMAL(15,2) NOT NULL,
-                             S_COMMENT     VARCHAR(101) NOT NULL);
+                             S_COMMENT     VARCHAR(101));
 
 CREATE TABLE PARTSUPP ( PS_PARTKEY     INTEGER NOT NULL,
                              PS_SUPPKEY     INTEGER NOT NULL,

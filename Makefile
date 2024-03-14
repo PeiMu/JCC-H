@@ -3,12 +3,12 @@
 ################
 CC      = gcc 
 # Current values for DATABASE are: INFORMIX, DB2, TDAT (Teradata)
-#                                  SQLSERVER, SYBASE, ORACLE, VECTORWISE
-# Current values for MACHINE are:  ATT, DOS, HP, IBM, ICL, MVS, 
-#                                  SGI, SUN, U2200, VMS, LINUX, WIN32 
+#                                  SQLSERVER, SYBASE, ORACLE, VECTORWISE, POSTGRESQL
+# Current values for MACHINE are:  ATT, DOS, HP, IBM, ICL, MVS, MACOS
+#                                  SGI, SUN, U2200, VMS, LINUX, WIN32
 # Current values for WORKLOAD are:  TPCH
-DATABASE= VECTORWISE 
-MACHINE = LINUX
+DATABASE = POSTGRESQL
+MACHINE  = LINUX
 WORKLOAD = TPCH
 #
 CFLAGS	= -g -DDBNAME=\"dss\" -D$(MACHINE) -D$(DATABASE) -D$(WORKLOAD) -DRNG_TEST -D_FILE_OFFSET_BITS=64 -DJCCH_SKEW=1

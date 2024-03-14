@@ -20,7 +20,7 @@ explain analyze select
 from
 	lineitem
 where
-	l_shipdate <= date '1998-12-01' - interval '108' day (3)
+	l_shipdate <= date '1998-12-01' - interval '108' day
 group by
 	l_returnflag,
 	l_linestatus

@@ -1,5 +1,5 @@
 -- TPC TPC-H Parameter Substitution (Version 2.17.2 build 0)
--- using 1710448883 as a seed to the RNG
+-- using 1710451746 as a seed to the RNG
 -- $ID$
 -- TPC-H/TPC-R Local Supplier Volume Query (Q5)
 -- Functional Query Definition
@@ -23,9 +23,9 @@ where
 	and c_nationkey = s_nationkey
 	and s_nationkey = n_nationkey
 	and n_regionkey = r_regionkey
-	and r_name = 'EUROPE'
-	and o_orderdate >= date '1993-01-01'
-	and o_orderdate < date '1993-01-01' + interval '1' year
+	and r_name = 'ASIA'
+	and o_orderdate >= date '1994-01-01'
+	and o_orderdate < date '1994-01-01' + interval '1' year
 group by
 	n_name
 order by

@@ -1,5 +1,5 @@
 -- TPC TPC-H Parameter Substitution (Version 2.17.2 build 0)
--- using 1710448883 as a seed to the RNG
+-- using 1710451746 as a seed to the RNG
 -- $ID$
 -- TPC-H/TPC-R Important Stock Identification Query (Q11)
 -- Functional Query Definition

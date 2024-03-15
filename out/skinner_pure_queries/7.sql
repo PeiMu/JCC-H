@@ -1,5 +1,5 @@
 -- TPC TPC-H Parameter Substitution (Version 2.17.2 build 0)
--- using 1710448883 as a seed to the RNG
+-- using 1710451746 as a seed to the RNG
 -- $ID$
 -- TPC-H/TPC-R Volume Shipping Query (Q7)
 -- Functional Query Definition
@@ -32,8 +32,8 @@ from
 			and s_nationkey = n1.n_nationkey
 			and c_nationkey = n2.n_nationkey
 			and (
-				(n1.n_name = 'UNITED STATES' and n2.n_name = 'GERMANY')
-				or (n1.n_name = 'GERMANY' and n2.n_name = 'UNITED STATES')
+				(n1.n_name = 'GERMANY' and n2.n_name = 'UNITED STATES')
+				or (n1.n_name = 'UNITED STATES' and n2.n_name = 'GERMANY')
 			)
 			and l_shipdate between date '1993-01-01' and date '1994-12-31'
 	) as shipping

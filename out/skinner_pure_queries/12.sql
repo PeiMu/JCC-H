@@ -1,5 +1,5 @@
 -- TPC TPC-H Parameter Substitution (Version 2.17.2 build 0)
--- using 1710448883 as a seed to the RNG
+-- using 1710451746 as a seed to the RNG
 -- $ID$
 -- TPC-H/TPC-R Shipping Modes and Order Priority Query (Q12)
 -- Functional Query Definition
@@ -28,8 +28,8 @@ where
 	and l_shipmode in ('REG AIR', 'FOB')
 	and l_commitdate < l_receiptdate
 	and l_shipdate < l_commitdate
-	and l_receiptdate >= date '1993-01-01'
-	and l_receiptdate < date '1993-01-01' + interval '1' year
+	and l_receiptdate >= date '1994-01-01'
+	and l_receiptdate < date '1994-01-01' + interval '1' year
 group by
 	l_shipmode
 order by

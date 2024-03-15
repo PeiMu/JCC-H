@@ -1,5 +1,5 @@
 -- TPC TPC-H Parameter Substitution (Version 2.17.2 build 0)
--- using 1710448883 as a seed to the RNG
+-- using 1710451746 as a seed to the RNG
 -- $ID$
 -- TPC-H/TPC-R Large Volume Customer Query (Q18)
 -- Function Query Definition
@@ -27,7 +27,7 @@ where
 			l_quantity <= 100
 		group by
 			l_orderkey having
-				sum(l_quantity) > 814
+				sum(l_quantity) > 815
 	)
 	and c_custkey = o_custkey
 	and o_orderkey = l_orderkey

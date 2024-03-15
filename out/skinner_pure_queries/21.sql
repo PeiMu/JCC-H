@@ -1,5 +1,5 @@
 -- TPC TPC-H Parameter Substitution (Version 2.17.2 build 0)
--- using 1710448883 as a seed to the RNG
+-- using 1710451746 as a seed to the RNG
 -- $ID$
 -- TPC-H/TPC-R Suppliers Who Kept Orders Waiting Query (Q21)
 -- Functional Query Definition
@@ -39,7 +39,7 @@ where
 			and l3.l_receiptdate > l3.l_commitdate
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'EGYPT'
+	and n_name = 'MOROCCO'
 group by
 	s_name
 order by
